@@ -12,7 +12,7 @@ const req = http.request(options, res => {
   let data = '';
   res.on('data', chunk => data += chunk);
   res.on('end', () => {
-    if(data === 'Hello, CI/CD!') {
+    if(data === 'Hello, CI/CD Pipelines') {
       console.log('Test passed!');
       process.exit(0);
     } else {
